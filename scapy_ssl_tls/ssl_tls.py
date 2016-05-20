@@ -856,7 +856,7 @@ class SSLv2ClientMasterKey(Packet):
                    XFieldLenField("key_argument_length", None, length_of="key_argument", fmt="H"),
 
                    StrLenField("clear_key", '', length_from=lambda x:x.clear_key_length),
-                   StrLenField("encrypted_key", '', length_from=lambda x:x.clear_key_length),
+                   StrLenField("encrypted_key", '', length_from=lambda x:x.encrypted_key_length),
                    StrLenField("key_argument", '', length_from=lambda x:x.key_argument_length),
                    ]
 
